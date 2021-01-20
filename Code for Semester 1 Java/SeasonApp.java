@@ -1,23 +1,22 @@
 import java.util.Scanner;
 public class SeasonApp{
-	public static void main(String[] args){
-		//dec vars
+	public static void main(String args[]){
+		//vars
 		int month;
 		String msg;
-		//dec objs
-		Scanner scan;
-		scan=new Scanner(System.in);
-		Season m;
-		m=new Season();
-		//inputs
-		System.out.println("Enter a number representing a month");
-		month=scan.nextInt();
+		//de/cre obj
+		Season s;
+		s=new Season();
+		Scanner scan=new Scanner(System.in);
+		//initialize
+		System.out.println("Enter 1 - 12, to get which season your month is in");
+			month=scan.nextInt();
 		//set
-		m.setSeason(month);
+		s.setMonth(month);
 		//compute
-		m.computeMsg();
+		s.computeMsg();
 		//get
-		msg=m.getMsg();
+		msg=s.getMsg();
 		//output
 		System.out.println(msg);
 	}

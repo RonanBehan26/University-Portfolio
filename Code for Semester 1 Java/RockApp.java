@@ -1,29 +1,24 @@
 import java.util.Scanner;
 public class RockApp{
-	public static void main(String[] args){
-		//declare vars
-		int hand;
-		int computerGuess;
-		String answer;
-		//declare objects
+	public static void main(String args[]){
+		//vars
+		int choice;
+		int computer;
+		String msg;
+		//dec/cre obj
 		Rock r;
 		r=new Rock();
-		Scanner scan;
-		scan=new Scanner(System.in);
-		//inputs
-		System.out.println("Enter the number of the hand you want to use. 1 for Rock, 2 for Paper ad 3 for Scissors.");
-		hand=scan.nextInt();
-
+		Scanner scan=new Scanner(System.in);
+		//initialize
+		System.out.println("Enter 1 for Rock, 2 for Paper and 3 for Scissors");
+			choice=scan.nextInt();
 		//set
-		r.setHand(hand);
-
-		//compute
+		r.setChoice(choice);
+		//comp
 		r.gameLogic();
-
 		//get
-		answer=r.getAnswer();
-
+		msg=r.getMsg();
 		//output
-		System.out.println(answer);
+		System.out.println(msg);
 	}
 }

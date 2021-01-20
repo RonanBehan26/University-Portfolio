@@ -1,21 +1,24 @@
 public class OddEven{
-	private int number;
+	//vars
+	private double input;
 	private String msg;
+	//constr
 	//set
-	public void setOddEven(int number){
-		this.number=number;
+	public void setInput(double input){
+		this.input=input;
 	}
-	//compute
+	//comput
 	public void computeMsg(){
-		if(number%2==0){
-			msg="It's even.";
+		if((input%2)/2==0){
+			msg="even";
 		}
 		else{
-			msg="It's odd.";
+			msg="odd";
 		}
 	}
 	//get
 	public String getMsg(){
 		return msg;
 	}
+
 }

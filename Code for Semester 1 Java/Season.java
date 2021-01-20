@@ -1,23 +1,25 @@
 public class Season{
+	//vars
 	private int month;
 	private String msg;
+	//con
 	//set
-	public void setSeason(int month){
+	public void setMonth(int month){
 		this.month=month;
 	}
-	//compute
+	//com
 	public void computeMsg(){
-		if(month==2 || month==3 || month==4){
-			msg="That's spring.";
+		if(month>=1 && month<=3){
+			msg="Spring";
 		}
-		else if(month==5 || month==6 || month==7){
-			msg="That's summer.";
+		else if(month>=4 && month<=6){
+			msg="Summer";
 		}
-		else if(month==8 || month==9 || month==10){
-			msg="That's autumn.";
+		else if(month>=7 && month<=9){
+			msg="Autumn";
 		}
-		else{
-			msg="That's winter.";
+		else if(month>=10 && month<=12){
+			msg="Winter";
 		}
 	}
 	//get

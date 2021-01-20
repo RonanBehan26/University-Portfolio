@@ -1,35 +1,31 @@
-//Extra Question Answered - - all good
 import java.util.Scanner;
 public class GradeApp{
-	public static void main(String[] args){
-		//declare vars
-		int x;
-
-		//dec obj
-		Scanner scan;
-		scan=new Scanner(System.in);
-
-		//input
-		System.out.println("Enter your University Grade");
-		x=scan.nextInt();
-
-		//process
-		if(x >= 70){
-			System.out.println("You got a 1.1!");
+	public static void main(String args[]){
+		//vars
+		String grade;
+		double[] results=new double[5];
+		double average;
+		//creat-dec
+		Grade g=new Grade();
+		Scanner scan=new Scanner(System.in);
+		//initialize-input
+		for(int i=0; i<results.length; i++){
+			System.out.println("Enter your result for mod: "+(i+1));
+			results[i]=scan.nextInt();
 		}
-		else if(x >= 60){
-			System.out.println("2.1!");
+		//set
+		g.setResults(results);
+		//compu
+		g.computeAverage();
+		g.computeGrade();
+		//get
+		average=g.getAverage();
+		grade=g.getGrade();
+		//output
+		for(int i=0; i<results.length; i++){
+			System.out.println("your results are: "+results[i]);
 		}
-		else if (x >= 50){
-			System.out.println("2.2!");
-		}
-		else if (x >= 40){
-			System.out.println("Pass!");
-		}
-		else{
-			System.out.println("Fail :(");
-		}
-
+		System.out.println("your average is: "+average);
+		System.out.println("your grade is: "+grade);
 	}
-
 }

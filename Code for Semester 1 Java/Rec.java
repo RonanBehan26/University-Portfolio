@@ -1,26 +1,25 @@
-//HW W4 Ex 1 Ins 2 - - all good
 public class Rec{
-	//declare vars
-	private int recHeight;
-	private int recWidth;
-	private int recArea;
-
-	//set methods
-	public void setRectangleHeight(int recHeight){
-		this.recHeight=recHeight;
+	//dec vars
+	private double lenGth;
+	private double heiGht;
+	private double arEa;
+	//constructors
+	//set
+	public void setLenGth(double lenGth){
+		this.lenGth=lenGth;
 	}
 
-	public void setRectangleWidth(int recWidth){
-			this.recWidth=recWidth;
+	public void setHeiGht(double heiGht){
+		this.heiGht=heiGht;
 	}
 
-	//process/compute
-	public void computerecArea(){
-		recArea=recHeight*recWidth;
+	//compute*
+	public void computeArEa(){
+		arEa=(lenGth*heiGht);
 	}
-
 	//get
-	public int getrecArea(){
-		return recArea;
+	public double getArEa(){
+		return arEa;
 	}
+
 }

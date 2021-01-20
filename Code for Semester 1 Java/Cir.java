@@ -1,21 +1,19 @@
-//HW W4 Ex 1 Ins 1 - - all good
 public class Cir{
-	//declare vars
-	private double radius;
-	private double answer;
-
-	//set methods
-	public void setRadius(double radius){
-		this.radius=radius;
+	//vars
+	private double raD;
+	private double arEa;
+	//const
+	//set
+	public void setRaD(double raD){
+		this.raD=raD;
 	}
-
-	//process/compute
-	public void computeanswer(){
-		answer=3.14*(radius*radius);
+	//compute*
+	public void computeArEa(){
+		arEa=3.14*(raD*raD);
 	}
 
 	//get
-	public double getanswer(){
-		return answer;
+	public double getArEa(){
+		return arEa;
 	}
 }

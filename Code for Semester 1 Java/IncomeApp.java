@@ -27,9 +27,9 @@ public class IncomeApp{
 		M.setExpenditure(expenditure);
 
 		//process
-		M.computeAnsOne(ansOne);
-		M.computeAnsTwo(ansTwo);
-		M.computeAnsThree(ansThree);
+		M.computeAnsOne();
+		M.computeAnsTwo();
+		M.computeAnsThree();
 
 		//get
 		ansOne=M.getAnsOne();

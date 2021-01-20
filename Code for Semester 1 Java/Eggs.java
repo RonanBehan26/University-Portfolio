@@ -1,32 +1,38 @@
 public class Eggs{
-	//declare vars
+	//vars
 	private int eggs;
-	private int numBoxes;
-	private int leftover;
-	private double totalCost;
-	//alternative: private double boxPrice=.99;
-	//set methods
+	private int boxes;
+	private int remainderEggs;
+	private double cost;
+	//constructors
+	//set
 	public void setEggs(int eggs){
 		this.eggs=eggs;
 	}
-	//process/compute
-	public void computeNumBoxes(){
-		numBoxes=eggs/6;
+	//compute*
+	public void computeBoxes(){
+		boxes=eggs/6;
 	}
-	public void computeTotalCost(){
-		totalCost=numBoxes*.99;
+
+	public void computeRemainderEggs(){
+		remainderEggs=eggs%6;
 	}
-	public void computeLeftover(){
-		leftover=eggs%6;
+
+	public void computeCost(){
+			cost=boxes*0.99;
 	}
+
 	//get
-	public int getNumBoxes(){
-		return numBoxes;
+	public int getBoxes(){
+		return boxes;
 	}
-	public int getLeftover(){
-		return leftover;
+
+	public int getRemainderEggs(){
+		return remainderEggs;
 	}
-	public double getTotalCost(){
-		return totalCost;
+
+	public double getCost(){
+		return cost;
 	}
+
 }

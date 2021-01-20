@@ -1,38 +1,43 @@
 import java.util.Scanner;
-	public class ClothesApp{
-		public static void main(String[] args){
+public class ClothesApp{
+	public static void main(String[] args){
+		//vars
+		int hats, tshirts, hoodies;
+		double hatCost, tshirtCost, hoodieCost;
+		double totalCost;
+		//dec/create objects
+		Scanner scan;
+		scan=new Scanner(System.in);
+		Clothes c;
+		c=new Clothes();
+		//instantiate/input
+		System.out.println("Please enter the number of hats you want");
+		hats=scan.nextInt();
 
-			//dec vars
-			int hats, tshirts, hoodies;
-			double cost;
+		System.out.println("please enter the no. of tshirts you want");
+		tshirts=scan.nextInt();
 
-			//dec objects
-			Scanner scan;
-			scan=new Scanner(System.in);
-			Clothes M;
-			M=new Clothes();
+		System.out.println("Please enter the amount of hoodies you want");
+		hoodies=scan.nextInt();
+		//set
+		c.setHats(hats);
+		c.setTshirts(tshirts);
+		c.setHoodies(hoodies);
+		//compute
+		c.computeHatCost();
+		c.computeTshirtCost();
+		c.computeHoodieCost();
+		c.computeTotalCost();
+		//get
+		hatCost=c.getHatCost();
+		tshirtCost=c.getTshirtCost();
+		hoodieCost=c.getHoodieCost();
+		totalCost=c.getTotalCost();
+		//output
+		System.out.println("The total cost of the hats you want are "+hatCost+" euros");
+		System.out.println("The total cost of the tshirts you want are "+tshirtCost+" euros");
+		System.out.println("The total cost of the hoodies you want are "+hoodieCost+" euros");
+		System.out.println("The total cost of your purchase is "+totalCost+" euros");
 
-			//inputs
-			System.out.println("Please enter the number of hats you would like.");
-				hats=scan.nextInt();
-				M.setHats(hats);
-
-			System.out.println("Please enter the number of tshirts you would like.");
-				tshirts=scan.nextInt();
-				M.setTshirts(tshirts);
-
-			System.out.println("Please enter the number of hoodies you want.");
-				hoodies=scan.nextInt();
-				M.setHoodies(hoodies);
-
-			//compute
-			M.computeCost();
-
-			//get
-			cost=M.getCost();
-
-
-			//output
-			System.out.println("Your purchase comes to "+hats+" hats "+tshirts+" tshirts and "+hoodies+" hoodies. This will add up to "+cost+" euro.");
-		}
 	}
+}

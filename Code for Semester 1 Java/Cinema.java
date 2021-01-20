@@ -1,23 +1,22 @@
 public class Cinema{
+	//vars
 	private int age;
 	private String msg;
+	//constr
 	//set
-	public void setCinema(int age){
+	public void setAge(int age){
 		this.age=age;
 	}
-	//compute
+	//compu
 	public void computeMsg(){
-		if(age<5){
-			msg="Free";
+		if(age<5 || age>65){
+			msg="free";
 		}
 		else if(age>=5 && age<=14){
-			msg="£5.50";
+			msg="5.50e";
 		}
 		else if(age>=15 && age<=65){
-			msg="£10.90";
-		}
-		else{
-			msg="Free";
+			msg="10.90e";
 		}
 	}
 	//get

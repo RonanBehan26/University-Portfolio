@@ -1,24 +1,24 @@
 import java.util.Scanner;
 public class CinemaApp{
-	public static void main(String[] args){
-		//dec vars
+	public static void main(String args[]){
+		//vars
 		int age;
 		String msg;
-		//dec obj
-		Scanner scan;
-		scan=new Scanner(System.in);
-		Cinema A;
-		A=new Cinema();
-		//input
-		System.out.println("Enter your age");
-		age=scan.nextInt();
+		//de/cre obj
+		Cinema c;
+		c=new Cinema();
+		Scanner scan=new Scanner(System.in);
+		//initiaize
+		System.out.println("Enter age sweetcheeks");
+			age=scan.nextInt();
 		//set
-		A.setCinema(age);
-		//compute
-		A.computeMsg();
+		c.setAge(age);
+		//comput
+		c.computeMsg();
 		//get
-		msg=A.getMsg();
-		//output
+		msg=c.getMsg();
+		//input
 		System.out.println(msg);
+
 	}
 }
