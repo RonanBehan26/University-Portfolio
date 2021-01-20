@@ -9,21 +9,21 @@ import java.util.Scanner;
 			//dec obs
 			Scanner scan;
 			scan=new Scanner(System.in);
-			Oe n;
-			n=new Oe();
+			Oe M;
+			M=new Oe();
 
 			//inputs
 			System.out.println("please enter your number");
 			number=scan.nextInt();
 
 			//set
-			n.setOe(number);
+			M.setOe(number);
 
 			//compute
-			n.computeMsg();
+			M.computeMsg();
 
 			//get
-			msg=n.getMsg();
+			msg=M.getMsg();
 
 			//output
 			System.out.println(msg);
