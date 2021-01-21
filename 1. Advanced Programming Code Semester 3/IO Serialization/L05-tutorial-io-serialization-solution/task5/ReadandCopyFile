@@ -1,0 +1,37 @@
+//perhaps more above this
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+public class ReadAndCopyFile( //1.40 vid 7
+
+        public static void main(String[] args) throws Exception{//general exception here not really required
+
+            //BufferedReader objReader = null;
+
+        String file Copy = "fileCopy.txt"
+
+        try(BufferedReader objReader = new BufferedReader(new BufferedReader(new FileReader("src\\tasks\\imput.txt"));
+        PrintWriter outFile = new PrintWriter(new BufferedWriter(new FileReader("fileCopy.txt"))); ){
+            //open with the try
+            String strCurrentLine;
+            //objReader = new BufferedReader(new FileReader("src\\tasks\\imput.txt"));
+        String fileCopy = "fileCopy.txt";
+        //FileWriter fw = new FileWriter(fileCopy);
+        //BufferedWriter bw = new BufferedWriter(fw);
+        //PrintWriter outFile = new PrintWriter(bw);
+
+        while ((strCurrentLine = objReader.readLine()) != null){
+            System.out.println(strCurrentLine);
+            outFile.println(strCurrentLine);
+        }
+        outFile.println();
+        //outFile.close();
+        System.out.println("A copy of the output file has been created: " + fileCopy);
+
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+        }
+        )//he has other shit but has it commented out
