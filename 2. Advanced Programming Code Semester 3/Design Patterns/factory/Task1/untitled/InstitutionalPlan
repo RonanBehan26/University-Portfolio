@@ -1,0 +1,10 @@
+package tasks.task1;
+
+public class InstitutionalPlan implements Plan {//impliment plan and the method, get rate
+
+    @Override
+    public double getRate() {
+        System.out.println("Institutional Plan calculation");
+        return 0.7;//just set as 1 here
+    }
+}

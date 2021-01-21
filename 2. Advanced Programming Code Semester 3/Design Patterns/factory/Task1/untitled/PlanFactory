@@ -1,0 +1,19 @@
+//this is the logic
+
+package tasks.task1;
+
+public class PlanFactory {
+
+    public static Plan getPlan(String planType) {//pass a string, which will define commercial or the others
+        if (planType == null) {
+            return null;
+        } else if (planType.equalsIgnoreCase("COMMERCIAL")){
+            return new CommercialPlan();
+        } else if (planType.equalsIgnoreCase("Domestic")){
+            return new DomesticPlan();
+        } else if (planType.equalsIgnoreCase("Institutional")){
+            return new InstitutionalPlan();
+        }
+        return null;
+    }
+}

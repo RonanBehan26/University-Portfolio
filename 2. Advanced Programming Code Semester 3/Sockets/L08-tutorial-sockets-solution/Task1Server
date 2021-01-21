@@ -1,0 +1,30 @@
+package tasks;
+
+import java.net.ServerSocket; //(Can be imported)//start of 14
+
+public class Task1Server { //related to the task1Client
+
+    public static void main(String[] args) throws IOException {
+
+        ServerSocket server = new ServerSocket(8080); //called Server, 8080
+        Socket client = server.accept();
+//reads
+        BufferedReader clientInput = new BufferedReader(new InputStreamReader(client.getInputStream()));
+        DataOutputStream clientOutput = new DataOutputStream(client.getOutputStream());
+
+        //reads from client
+        String radiusStr = clientInput.readLine();
+
+        //calculates
+        Double circleArea = Math.PI * Math.pow(Double.parseDouble(radiusStr), 2);
+
+        //sends back to client
+        clientOutput.writeBytes(circleArea.toString());
+
+        clientOutput.close();
+        clientInput.close();
+        client.close();
+        server.close();
+
+    }
+}

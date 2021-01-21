@@ -1,0 +1,22 @@
+package tasks.task2;
+
+public class VegFood extends FoodDecorator {
+
+    public VegFood(Food food) {
+        super(food);
+    }
+
+    @Override
+    public String getDescription() {
+
+        return this.food.getDescription() + " vegetarian";
+    }
+
+    @Override
+    public double getCost() {
+        return this.food.getCost() + 3.0;//adds three to the Irish or chinese
+    }
+
+
+
+}

@@ -1,0 +1,10 @@
+package tasks.task1;
+
+public class DomesticPlan implements Plan {//impliment plan and the method, get rate
+
+    @Override
+    public double getRate() {
+        System.out.println("Domestic Plan calculation");
+        return 0.5;//just set as 1 here
+    }
+}

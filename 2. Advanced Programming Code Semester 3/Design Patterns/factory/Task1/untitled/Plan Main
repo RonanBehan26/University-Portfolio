@@ -1,0 +1,12 @@
+package tasks.task1;
+
+public class PlanMain {
+
+    public static void main(String[] args) {
+        double qtyKWh = 84.4; //specific weight
+
+        Plan intitutional = PlanFactory.getPlan("INSTITUTIONAL"); //see, change this to see the difference
+        System.out.println("Amount " + (qtyKWh * institutional.getRate()));
+
+    }
+}

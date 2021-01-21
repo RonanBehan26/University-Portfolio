@@ -1,0 +1,30 @@
+package task;
+
+import java.io.BufferedReader;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.Socket;
+import java.io.UnknownHostException;
+import java.io.Scanner;
+
+
+public class Task1Client {
+
+    public static void main(String[] args) throws UnknownHostException, IOException {
+
+        Socket server = new Socket("locahost", 8080);
+
+        Scanner keyboard = new Scanner(System.in);
+        Double Radius = keyboard.nextDouble();
+
+        BufferedReader serverInput = new BufferedReader(new InputStreamReader(server.getInputStream()));
+        DataOutputStream serverOutput = new DataOutputStream(server.getOutputStream());
+
+        serverOutput.writeBytes(radius.toString() + "\n");
+
+        String circleArea = serverInput.readLine();
+
+        System.out.println("Circle Radius " + radius + ", Area is" + circleArea);
+    }
+}

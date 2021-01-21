@@ -1,0 +1,28 @@
+package tasks.task2;
+
+public abstract class FoodDecorator implements Food {
+    //abstract needs to become concrete - nonVeg, Veg
+
+    protected Food food;
+
+    public FoodDecorator(Food food) {
+        this.food = food;
+    }
+
+    @Override
+    public String getDescription() {
+
+        return this.food.getDescription();
+    }
+
+    @Override
+    public double getCost() {
+        return this.food.getCost();
+    }
+
+
+
+
+
+
+}

@@ -1,0 +1,11 @@
+package tasks.task1;
+
+public class CommercialPlan implements Plan {//impliment plan and the method, get rate
+
+    @Override
+    public double getRate() {
+        System.out.println("Commercial Plan calculation");
+        return 1.0;//just set as 1 here
+        //could do a calculation here
+    }
+}

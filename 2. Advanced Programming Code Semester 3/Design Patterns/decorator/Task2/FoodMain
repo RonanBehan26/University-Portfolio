@@ -1,0 +1,14 @@
+package tasks.task2;
+
+public class FoodMain {
+
+    public static void main(String[] args) {
+        Food chinese = new VegFood(new ChineseFood());
+        System.out.println("Food: " + chinese.getDescription());
+        System.out.println("Total Cost: " + chinese.getCost());
+
+        Food irish = new NonVegFood(new IrishFood());
+        System.out.println("Food: " + irish.getDescription());
+        System.out.println("Total Cost: " + irish.getCost());
+    }
+}

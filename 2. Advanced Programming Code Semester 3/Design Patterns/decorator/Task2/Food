@@ -1,0 +1,8 @@
+package tasks.task2;
+
+public interface Food (//interface here with 2 methods
+
+        public String getDesciption();
+
+        public double getCost();
+        )

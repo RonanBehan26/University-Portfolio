@@ -1,0 +1,6 @@
+package tasks.task1;
+//this is the interface
+public interface Plan {
+
+    public double getRate();//get rates for different types of plans
+}

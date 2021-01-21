@@ -1,0 +1,19 @@
+package tasks.task2;
+
+public class nonVegFood extends FoodDecorator {
+
+    public NonVegFood(Food food) {
+        super(food);
+    }
+
+    @Override
+    public String getDescription() {
+        return this.food.getDescription() + " non-vegetarian";
+    }
+
+    @Override
+    public double getCost() {
+        return this.food.getCost() + 5.0;//adds 5 to the Irish or chinese
+    }
+
+}
