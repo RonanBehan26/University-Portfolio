@@ -1,0 +1,88 @@
+package problems;
+//this is task 4 too, the way he did in the video
+public class Task41 implements Runnable {
+
+    private String letter;
+    private String num;
+
+//min 55 - he adds boolean, not part of original, see commented out below
+    public Task41 (String letter, int num) {
+        this.letter = letter;
+        this.num = num;
+    }
+
+    @Override
+        public void run() {
+            for(int i = 1; i < this.num; i++) {
+                System.out.println(this.letter);
+            }
+        }
+
+        //grey intellij
+        //remember this is the create the thread
+        public static void main(String[] args) {
+        Thread f = new Thread(new Task41("a", 100));
+        Thread s = new Thread(new Task41("b", 100));
+        Thread t = new Thread(new printNumber()); //instantiating the class
+            // remember this is the run the thread
+        f.start();
+        s.start();
+        t.start();
+
+    }
+}
+
+
+class printNumber implements Runnable {
+
+    @Override
+    public void run() {
+        for(int i = 1; i <= 100; i++){
+            System.out.println(i);
+        }
+    }
+}
+
+/*
+public class Task41 implements Runnable {
+
+    private String letter;
+    private String num;
+    private Boolean opt;
+
+    //min 55 - he adds boolean, not part of original, see here
+
+    public Task41 (String letter, int num) {
+        this.letter = letter;
+        this.num = num;
+        this opt = opt;
+    }
+
+    @Override
+    public void run() {
+    if(opt){
+        for(int i = 1; i < this.num; i++) { //two of the instances will go through here
+            System.out.println(this.letter);
+        }
+        }else{
+        for(int i = 1; i <= this.num; i++){//one will go through here
+            System.out.println(i);
+            }
+            }
+    }
+
+    //grey intellij
+    //remember this is the create the thread
+
+    public static void main(String[] args) {
+        Thread f = new Thread(new Task41("a", 100, true));
+        Thread s = new Thread(new Task41("b", 100, true));
+        Thread t = new Thread(new Task41("c", 100, false)); //instantiating the class
+
+        // remember this is the run the thread
+        f.start();
+        s.start();
+        t.start();
+
+    }
+}

@@ -1,0 +1,28 @@
+package examples;
+
+public class DataRace implements  Runnable { //min 1.53 vid 12
+
+    static volatile int x = 0;
+    //volitile indicates that the var has the same position in memory that I'm going to access
+    //all threads will access the same location in memory (memory position)
+    //keep running, the number will chance
+    //but if we do this we may envounter a race condition
+    public void run() {
+
+        for(int i = 0; i < 10000; i++) {
+            x++;
+            x--;
+        }
+    }
+
+    public static void main(String[] args) throws Exception {
+        Thread[] threads = new Thread[100];
+        for (int i = 0; i < threads.length; i++) {
+            threads[i] = new Thread(new DataRace()); //this DataRace is referring to the class
+        }
+        for (int i = 0; i< threads.length; i++) {
+            threads[i].start();
+        }
+        System.out.println(x);
+    }
+}
