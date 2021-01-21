@@ -1,0 +1,141 @@
+*	{
+	 margin: 0;
+	 padding: 0;
+	 list-style: none;
+	 text-decoration: none;
+	 font-family: 'Open Sans', sans-serif;
+	 text-align: center;
+	 font-family: Georgia, serif;
+	}
+ /* use the * to assign properties to everything on the page */
+ 
+ 
+body{ /* body = I’m clearing out margin and padding and giving a background color to the body first... */
+      margin: 0 auto; /* auto this makes the website stay in the middle */
+	  width: 95%; /*makes the website take up 95% of the screen. */
+	  color: white;
+      background: blue;
+	  max-width: 1200px; /*min and max width in order so that the content doesn't get smushed together ...  */
+		min-width: 320px;
+    }
+
+
+h1 	{ /* changed from top to h1... */
+	background-color: #00008B;
+	color: white;
+	text-align: center;
+	padding: 20px;
+	font-size: 70px; /* size of the h1... */
+	}
+	
+
+ul 	{
+	list-style-type: none;
+	overflow: hidden;
+	color: white;
+	background-color: #444444;  /* ul background color is the color of the nav bar... */
+	}
+
+
+
+li 	{
+	float: left;
+	}
+
+/* li To keep the wording of the nav bar on the left ... */
+
+li a {
+	display: block;
+	color: white; /* the color of the writing in the nav ... */
+	text-align: center;
+	padding: 16px 18px;
+	text-decoration: none;
+	margin: auto;
+	}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+	background-color: #111;
+	}
+
+h2 {
+	display: block;
+	background-color: #00FFFF;
+	margin: auto;
+	width: 51%;
+	border: 3px solid #444444;
+	padding: 10px;
+	}
+
+
+
+/*This is the footer, it is placed at the bottom of the page. */
+h3 {
+	background-color: #444444;
+	padding: 4px;
+	margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%; 
+	position: fixed;
+	display: block;
+	margin: auto;
+	bottom: 0; /* This sticks the footer to the bottom of the page */
+	width: 88%; /*This is to make the footer block the same size as the heading. */
+	color: white;
+	text-align: center;
+	height: 30px; 
+	}
+
+/*This is for the content of the membership */
+.offerone { 
+	float:left; 
+	width: 33%; 
+	border: 1px solid; 
+	background-color: 
+	#7FFF00;
+	}
+
+.offertwo { 
+	float:left; 
+	width: 33%; 
+	border: 1px solid; 
+	background-color: #008B8B;
+	}
+
+.offerthree { 
+	float:left; 
+	width: 33%; 
+	border: 1px solid; 
+	background-color: #FFD700
+	}
+
+/*This was to rearrage the position of the slogan on the membership page */
+.sloganone {
+	width: 90%; 
+	position: fixed;
+	margin: auto;
+	width: 88%; 
+	color: white;
+	text-align: center;
+	bottom: 20%;
+	height: 10px; 
+	}
+	
+	 /* For devces wth 480px or more, for smaller phones or computers */
+@media screen and (min-device-width : 320px) and (max-devicewidth : 480px) {
+}
+	
+/* generally for bigger phones, 600px */
+@media only screen and (min-device-width : 480px) and (max-width: 600px) {
+	}
+
+/* For mid sized devices like tablets 768px and up) */
+@media only screen and (min-device-width : 600px) and (min-width: 768px) {
+	}
+
+/* For big devices such as laptops or monitors, 992px and up) */
+@media only screen and (min-device-width : 768px) and (min-width: 992px) {...}
+
+/* For even bigger devices which may have 1200px and up) */
+@media only screen and (min-device-width : 992px) and (min-width: 1200px) {...}

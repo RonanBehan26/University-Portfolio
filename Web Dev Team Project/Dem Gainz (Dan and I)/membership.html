@@ -1,0 +1,79 @@
+<!DOCTYPE html> <!-- HTML5 doctype -->
+
+<html lang="en"> <!-- HTML5 opening HTML tag with language. The HTML tag can also be used on it's own -->
+
+	<head>
+		
+		<meta charset="UTF-8"> <!-- HTML5 charset -->
+		<link rel="stylesheet" href="stylz.css"/> <!-- Link to CSS -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- For responsivness -->
+		<title>DemGainz</title> <!-- Name of Website -->
+		
+		<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<!-- [if lte IE9]>
+			<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+		<![endif]-->
+		
+	</head>
+
+	<body onload="myMoney()">
+		<script> <!-- JavaScript 4th example -->
+			function myMoney()
+			{
+			alert("You can't really afford not to!");
+			}
+		</script>
+		<!-- Heading -->
+		<div class="top">	
+			<div class="logo">
+				<h1>DemGainz Gym</h1>
+			</div>			
+			<div class="nav">
+				<ul> 
+						<li><a href="index.html"> Home </a></li>
+						<li><a href="membership.html"> Membership </a></li>
+						<li><a href="about.html"> About/Locations </a></li>
+						<li><a href="gallery.html"> Gallery </a></li>
+						<li><a href="classes.html"> Classes </a></li>
+						<li><a href="contact.html"> Contact </a></li>
+				</ul>			
+			</div>
+			<div class="page">
+				<h2>Membership</h2>
+			</div>
+		</div>	
+		<br/> <!-- (Ronan) added this to seperate the heading of the current page from the content... -->
+		<!-- Content -->
+		<div class="middle">
+		<br/><br/><br/><br/><br/>
+			<div id="deals">
+				<div class="offerone">
+					<p>Monthly</p> <!-- (Ronan) I changed these from h3, h4, h4 to help them fit into their boxes... -->
+					<p>Single Gym only €30</p>
+					<p>All Gyms only €40</p>
+				</div>
+				<div class="offertwo">
+					<p>Quarterly</p>
+					<p>Single Gym only €100</p>
+					<p>All Gyms only €120</p>
+				</div>
+				<div class="offerthree">
+					<p>Yearly</p>
+					<p>Single Gym only €350</p>
+					<p>All Gyms only €400</p>
+				</div>
+			</div>
+			<div class="sloganone">
+				<p>Here at DemGainzGym you can also get DemSavings! Call 0121 - 895 765 to join today.</p>
+			</div>
+	
+		</div>
+		<!-- Footer -->
+		<div class="footer">
+			<h3> &copy; 2019 DemGainz Gym </h3>		
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html> <!-- HTML5 doctype -->
+
+<html lang="en"> <!-- HTML5 opening HTML tag with language. The HTML tag can also be used on it's own -->
+
+	<head>
+		
+		<meta charset="UTF-8"> <!-- HTML5 charset -->
+		<link rel="stylesheet" href="stylz.css"/> <!-- Link to CSS -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- For responsivness -->
+		<title>DemGainz</title> <!-- Name of Website -->
+		
+		<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<!-- [if lte IE9]>
+			<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+		<![endif]-->
+		<script> <!-- JavaScript 3rd, also see below in "id submit" example -->
+			function myAlert()
+			{
+			alert("Thank you for DemComments");
+			}
+		</script>
+	</head>
+
+	<body>
+		<!-- Heading -->
+		<div class="top">	
+			<div cllass="logo">
+				<h1>DemGainz Gym</h1>
+			</div>			
+			<div class="nav">
+				<ul> 
+						<li><a href="index.html"> Home </a></li>
+						<li><a href="membership.html"> Membership </a></li>
+						<li><a href="about.html"> About/Locations </a></li>
+						<li><a href="gallery.html"> Gallery </a></li>
+						<li><a href="classes.html"> Classes </a></li>
+						<li><a href="contact.html"> Contact </a></li>
+				</ul>			
+			</div>
+			<div class="page">
+				<h2>Contact</h2>
+			</div>	
+		</div>	
+		<br/> <!-- (Ronan) added this to seperate the heading of the current page from the content... -->
+		<!-- Content -->
+		<div class="middle">
+			<!-- We set up an email address to receive comments from customers -->
+			<div id= "contact">
+				<h3 id="message">Get in touch.</h3>
+				<form action="MAILTO:DemGainzGym@outlook.com" method="post" enctype="text/plain">
+					<label class="info">Which gym would you like to contact:</label>
+					<select name="city">
+						<option value="Cork"> Cork  </option>
+						<option value="Dublin"> Dublin  </option>
+						<option value="NewYork"> NewYork  </option>
+						<option value="London"> London  </option>
+						<option value="Paris"> Paris  </option>
+						<option value="Berlin"> Berlin  </option>
+						<option value="All"> All Gyms  </option>
+					</select><br/>
+					
+					<label class="info">First Name:</label><br/>
+                    <input class="form" type="text" name="First Name" size="35" required="required" maxlength="35" /><br/>
+					<label class="info">Second Name:</label><br/>
+                    <input class="form" type="text" name="Second Name" size="35" required="required" maxlength="35" /><br/>
+					<label class="info">Email:</label><br/>
+                    <input class="form" type="text" name="Email" size="35" required="required" maxlength="35" /><br/>
+
+					<label class="info">Comments:</label><br/>
+					<textarea name="comments" maxlength="600" placeholder="Comments" rows = "9" cols = "60"></textarea><br/>
+					<input id="submit" type="submit" value="Send" onclick="myAlert()"/>
+					<input id="reset" type="reset" value="Reset"/>
+				</form>
+			</div>
+			<div class="slogan">
+				<p>With DemComments we are going to make DemGainzGyms even better! Thank you.</p>
+			</div>
+		</div>
+		<!-- Footer -->
+		<div class="footer">
+			<h3> &copy; 2019 DemGainz Gym</h3>		
+		</div>
+			
+			
+	</body>
+
+</html>
