@@ -16,7 +16,7 @@ public class Age{
 		result="5e";
 	}
 	else if(age>=35 && age<=69){
-		result="Come in out o the cold you auld bastard";
+		result="Come in out o the cold you auld fella";
 	}
 
 
