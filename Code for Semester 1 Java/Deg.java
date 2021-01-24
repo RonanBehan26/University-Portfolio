@@ -44,7 +44,7 @@ public class Deg{
 			result="pass " +average;
 		}
 		else if(average<40){
-			result="Fuck off home you bollock";
+			result="Go home please";
 		}
 	}
 	//get
