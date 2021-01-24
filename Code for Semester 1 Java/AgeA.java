@@ -10,7 +10,7 @@ public class AgeA{
 	//com
 	public void computeResult(){
 		if(age<18 || age>70){
-			result="Fuck Off";
+			result="Go home";
 		}
 		else if(age>=18 && age<=34){
 			result="5e";
